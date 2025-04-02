@@ -6,11 +6,11 @@ app.listen(config.port, () => {
 });
 
 app.get('/login', (req,res) => {
-  res.sendFile('static/index.html', { root: __dirname });
+  res.sendFile('static/login/index.html', { root: __dirname });
 })
 app.get('/signup', (req,res) => {
-  res.sendFile('static/index.html', { root: __dirname });
+  res.sendFile('static/signup/index.html', { root: __dirname });
 })
 app.get('/home', (req,res) => {
-  res.sendFile('static/index.html', { root: __dirname });
+  res.sendFile('static/home/index.html', { root: __dirname });
 })

@@ -6,8 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const itemRoutes_1 = __importDefault(require("./routes/itemRoutes"));
 const errorHandler_1 = require("./middlewares/errorHandler");
+const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+app.use(express_1.default.static(path_1.default.join(__dirname, 'static')));
 // Routes
 app.use('/api/items', itemRoutes_1.default);
 // Global error handler (should be after routes)

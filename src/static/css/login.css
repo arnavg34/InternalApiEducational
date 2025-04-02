@@ -1,0 +1,17 @@
+.center-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-flow: row wrap;
+}
+.login-box {
+    display: flex;
+}
+.child1{
+    flex: 1 0 auto;
+}
+
+.child {
+    flex: 1 100%;
+}

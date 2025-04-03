@@ -10,6 +10,9 @@ const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use(express_1.default.static(path_1.default.join(__dirname, 'static')));
+const distPath = path_1.default.resolve(__dirname.includes('dist') ? __dirname : path_1.default.join(__dirname, '..', 'dist'));
+console.log('DIST FOLDER:', distPath);
+app.use('/dist', express_1.default.static(distPath));
 // Routes
 app.use('/api/items', itemRoutes_1.default);
 // Global error handler (should be after routes)

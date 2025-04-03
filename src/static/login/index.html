@@ -9,12 +9,14 @@
 <body>
     <div class="center-screen">
         <div class="inputs">
-            <div class='child'><input>Email</input></div>
-            <div class='child'><input>Password</input></div>
+            <div class='child'><input type="text" id="email">Email</input></div>
+            <div class='child'><input type="text" id="password">Password</input></div>
             <div class="login-box">
-                <div id="login-button"class='child1'><h1>Login</h1></div>
-                <div id="signup-button" class='child1'><h1>Need to Signup?</h1></div>
+                <div class='child1'><h1 id="login-button">Login</h1></div>
+                <div class='child1'><h1 id="signup-button">Need to Signup?</h1></div>
             </div>
+            <span id="email-span">The Email is:</span>
+            <span id="password-span">The Password is:</span>
         </div>
     </div>
     <script type="module" src="/dist/static/login/login.js"></script>

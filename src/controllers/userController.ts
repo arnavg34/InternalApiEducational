@@ -29,8 +29,8 @@ export const getUsers = (req: Request, res: Response, next: NextFunction) => {
 // return json if found
 export const getUserByEmail = (req: Request, res: Response, next: NextFunction) => {
     try {
-      const email = req.body.email;
-      const user = users.find((i) => i.email === email);
+      const {email,password} = req.body;
+      const user = users.find((i) => i.email === email && i.password === password);
       if (!user) {
         res.status(404).json({ message: 'Item not found' });
         return;

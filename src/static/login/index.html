@@ -9,14 +9,18 @@
 <body>
     <div class="center-screen">
         <div class="inputs">
-            <div class='child'><input type="text" id="email">Email</input></div>
-            <div class='child'><input type="text" id="password">Password</input></div>
-            <div class="login-box">
-                <div class='child1'><h1 id="login-button">Login</h1></div>
-                <div class='child1'><h1 id="signup-button">Need to Signup?</h1></div>
+            <div class="top">
+                <h1>Login</h1>
+                <p>Enter your email below to login to your account.</p>
             </div>
-            <span id="email-span">The Email is:</span>
-            <span id="password-span">The Password is:</span>
+            <div class="middle">
+                <h3>Email</h3><div class='child'><input class="input" type="text" id="email" placeholder="m@example.com"></input></div>
+                <h3>Password</h3><div class='child'><input class="input" type="text" id="password"></input></div>
+            </div>
+            <div class="login-box">
+                <h3 class="login" id="login-button">Login</h3>
+                <h4 class="sign-up" id="signup-button">Don't have an account? <u>Sign up </u></h4>
+            </div>
         </div>
     </div>
     <script type="module" src="/dist/static/login/login.js"></script>

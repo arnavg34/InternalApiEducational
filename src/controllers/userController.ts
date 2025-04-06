@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { users, User } from "../models/user";
 import { Session } from "express-session";
 
-interface AuthenticatedRequest extends Request {
+export interface AuthenticatedRequest extends Request {
   session: Session & {
     userEmail?: string;
   };
@@ -78,8 +78,8 @@ export const deleteUser = (req: AuthenticatedRequest, res: Response, next: NextF
         return;
       }
       const deletedUser = users.splice(userIndex, 1)[0];
-      res.json(users);
       req.session.userEmail = undefined;
+      res.status(201).json(users);
     } catch (error) {
       next(error);
     }

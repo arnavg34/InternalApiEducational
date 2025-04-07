@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.login, .sign-up, .update, .delete, .delete-button {
+    padding: 2px;
+    border: 1px black;
+    border-radius: 10px;
+}
+.update, .delete {
+    width: 200px
+}
+.delete-button {
+    width:200px;
+    color:white;
+    background-color:black;
+    text-align: center;
+    cursor: pointer;
+}
+.delete-inputs{
+    border: 1px solid #000000;
+    border-radius: 15px;
+    height: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}

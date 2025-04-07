@@ -53,5 +53,7 @@ document.getElementById('signup-button')?.addEventListener("click", async () =>{
         }
     }
 });
-
+document.getElementById('login-button')?.addEventListener("click", () =>{
+    window.location.href = '/login';
+});
 

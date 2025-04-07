@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.errorHandler = exports.requireAuth = void 0;
 const requireAuth = (req, res, next) => {
-    const allowedPaths = ['/login/', '/signup/'];
+    const allowedPaths = ['/login/', '/signup/', '/signup', '/login'];
     const isStaticAsset = req.path.match(/\.(css|js|png|jpg|jpeg|gif|svg|ico)$/);
     const apiAllowed = req.path.startsWith('/api/users');
     if (allowedPaths.includes(req.path) || apiAllowed || isStaticAsset) {

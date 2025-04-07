@@ -4,7 +4,7 @@ export interface AppError extends Error {
   status?: number;
 }
 export const requireAuth = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
-  const allowedPaths = ['/login/', '/signup/'];
+  const allowedPaths = ['/login/', '/signup/', '/signup', '/login'];
   const isStaticAsset = req.path.match(/\.(css|js|png|jpg|jpeg|gif|svg|ico)$/);
   const apiAllowed = req.path.startsWith('/api/users');
   

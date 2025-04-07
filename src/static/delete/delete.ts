@@ -15,3 +15,6 @@ document.getElementById('signup-button')?.addEventListener("click", async () =>{
     }
     window.location.href = "/login"
 });
+document.getElementById('login-button')?.addEventListener("click", () =>{
+    window.location.href = '/home';
+});
